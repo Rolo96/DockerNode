@@ -9,12 +9,12 @@ Script docker swarm
 ```
 ## Installation
 You need to have Node JS and npm installed in your development environment.
-
+```
 1. Download the source repository.
 2. Run "npm install".
 3. Run "npm start".
-4. In your browser navigate to: [localhost:8000/graphql](localhost:8000/graphql).
-
+4. In your browser navigate to: localhost:8000/graphql
+```
 ## Orders model
 ```
 id: int
