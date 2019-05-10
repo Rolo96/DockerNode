@@ -3,7 +3,7 @@ const graphql = require("graphql")
 const { GraphQLObjectType,GraphQLString, GraphQLInt, GraphQLList } = graphql
 
 //local imports
-import Product from './product-type'
+import Product from "./product-type"
 
 /**
  * order type model

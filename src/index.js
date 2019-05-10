@@ -1,6 +1,6 @@
 "use strict"
 //modules imports
-const models = require('./models')
+const models = require("./models")
 import Hapi from "hapi"
 import { graphqlHapi, graphiqlHapi } from "apollo-server-hapi"
 
@@ -19,7 +19,7 @@ server.route({
     method: "GET",
     path: "/",
     handler: function() {
-        return "<h1>Ingrese a /graphiql</h1>"
+        return "<h1>Ingrese a /graphql</h1>"
     }
 })
 
@@ -31,8 +31,8 @@ const start = async function() {
         await server.register({
             plugin: graphiqlHapi,
             options: {
-                path: "/graphiql",
-                graphiqlOptions: { endpointURL: "/graphql" },
+                path: "/graphql",
+                graphiqlOptions: { endpointURL: "/graphql2" },
                 route: { cors: true }
             }
         })
@@ -40,7 +40,7 @@ const start = async function() {
         await server.register({
             plugin: graphqlHapi,
             options: {
-                path: "/graphql",
+                path: "/graphql2",
                 graphqlOptions: { schema },
                 route: { cors: true }
             }
