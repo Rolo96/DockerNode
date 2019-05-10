@@ -27,7 +27,7 @@ To consult all the orders, the following query is used:
   }
 }
 ```
-To consult onde order, the following query is used: 
+To consult on order, the following query is used: 
 ```
 {
   Order(id:1){
