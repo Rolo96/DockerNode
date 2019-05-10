@@ -1,4 +1,5 @@
 # Orders API (Node Docker) 
+
 ```
 Technological Institute of Costa Rica
 Project2 CompraTec
@@ -6,7 +7,14 @@ Teacher: Raul Madrigal Acuña
 Students: Raul Arias, Rony Paniagua
 Script docker swarm
 ```
-
+## Installation
+You need to have Node JS and npm installed in your development environment.
+```
+1. Download the source repository.
+2. Run "npm install".
+3. Run "npm start".
+4. In your browser navigate to: [localhost:8000/graphql](localhost:8000/graphql).
+```
 ## Orders model
 ```
 id: int
@@ -27,7 +35,7 @@ To consult all the orders, the following query is used:
   }
 }
 ```
-To consult on order, the following query is used: 
+To consult one order, the following query is used: 
 ```
 {
   Order(id:1){
@@ -37,7 +45,7 @@ To consult on order, the following query is used:
 ```
 
 ### Insert
-To insert the orders the following mutation is used:
+To insert an order the following mutation is used:
 ```
 mutation{
   CreateOrder(order:{userid:1, products:[{id:1, amount:1, cost:1}], total:1}){
@@ -56,7 +64,7 @@ mutation{
   }
 }
 ```
-Where the id and code of the order is received as parameters to modify the other attributes. In the info you will see the result of the mutation
+Where the id of the order is received as parameters to modify the other attributes. In the info you will see the result of the mutation
 
 ## Delete
 To delete the orders the following mutation is used:
